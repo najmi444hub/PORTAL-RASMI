@@ -44,6 +44,25 @@
             box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
         }
     </style>
+    <script>
+        function validateLogin(event) {
+            event.preventDefault(); // Halang reload
+            
+            var username = document.getElementById("username").value;
+            var password = document.getElementById("password").value;
+            
+            // Tetapan Nama Pengguna & Kata Laluan
+            var validUsername = "admin";
+            var validPassword = "1234";
+            
+            if (username === validUsername && password === validPassword) {
+                alert("Log masuk berjaya! Selamat datang ke portal.");
+                window.location.href = "dashboard.html"; // Halaman selepas log masuk
+            } else {
+                alert("Nama pengguna atau kata laluan salah. Sila cuba lagi.");
+            }
+        }
+    </script>
 </head>
 <body>
     <header>
@@ -53,7 +72,7 @@
     
     <section class="login-form">
         <h2>Log Masuk</h2>
-        <form>
+        <form onsubmit="validateLogin(event)">
             <label for="username">Nama Pengguna:</label>
             <input type="text" id="username" name="username" required><br><br>
             <label for="password">Kata Laluan:</label>
