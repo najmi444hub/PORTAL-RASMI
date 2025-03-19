@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portal Rasmi JPKK Betong</title>
+    <title>Dashboard - JPKK Betong</title>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -17,8 +17,15 @@
             color: white;
             padding: 20px;
         }
-        img.logo {
-            width: 150px;
+        nav {
+            background-color: #50155A;
+            padding: 10px;
+        }
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 15px;
+            font-size: 18px;
         }
         section {
             margin: 20px;
@@ -35,67 +42,25 @@
             bottom: 0;
             width: 100%;
         }
-        .login-form {
-            max-width: 300px;
-            margin: auto;
-            padding: 20px;
-            background: white;
-            border-radius: 10px;
-            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
-        }
     </style>
-    <script>
-        function validateLogin(event) {
-            event.preventDefault(); // Halang reload
-            
-            var username = document.getElementById("username").value;
-            var password = document.getElementById("password").value;
-            
-            // Tetapan Nama Pengguna & Kata Laluan
-            var validUsername = "admin";
-            var validPassword = "1234";
-            
-            if (username === validUsername && password === validPassword) {
-                alert("Log masuk berjaya! Selamat datang ke portal.");
-                window.location.href = "dashboard.html"; // Halaman selepas log masuk
-            } else {
-                alert("Nama pengguna atau kata laluan salah. Sila cuba lagi.");
-            }
-        }
-    </script>
 </head>
 <body>
     <header>
-        <img src="jpkk-1.jpg" alt="Logo JPKK Betong" class="logo">
-        <h1>Portal Rasmi JPKK Betong</h1>
+        <h1>Dashboard JPKK Betong</h1>
     </header>
     
-    <section class="login-form">
-        <h2>Log Masuk</h2>
-        <form onsubmit="validateLogin(event)">
-            <label for="username">Nama Pengguna:</label>
-            <input type="text" id="username" name="username" required><br><br>
-            <label for="password">Kata Laluan:</label>
-            <input type="password" id="password" name="password" required><br><br>
-            <button type="submit">Log Masuk</button>
-        </form>
-    </section>
+    <nav>
+        <a href="#">Halaman Utama</a>
+        <a href="#">Pengumuman</a>
+        <a href="#">Aduan</a>
+        <a href="#">Tetapan</a>
+        <a href="index.html">Log Keluar</a>
+    </nav>
     
     <section>
         <h2>Selamat Datang</h2>
-        <p>Selamat datang ke Portal Rasmi Jawatankuasa Pembangunan dan Keselamatan Kampung (JPKK) Betong.</p>
-        <p>Berita terkini, pengumuman dan aktiviti komuniti akan dikemaskini di sini.</p>
-    </section>
-    
-    <section>
-        <h2>Borang Aduan & Maklum Balas</h2>
-        <form>
-            <label for="nama">Nama:</label>
-            <input type="text" id="nama" name="nama" required><br><br>
-            <label for="aduan">Aduan / Maklum Balas:</label><br>
-            <textarea id="aduan" name="aduan" rows="4" required></textarea><br><br>
-            <button type="submit">Hantar</button>
-        </form>
+        <p>Anda telah berjaya log masuk ke portal JPKK Betong.</p>
+        <p>Gunakan menu di atas untuk navigasi.</p>
     </section>
     
     <footer>
